@@ -102,8 +102,7 @@ def _check_pkg_config(_dyn_libs, _pkgc_args, *args, **kw_ext):
                 sargs.append(packages[i])
             if _dyn_libs and _dyn_libs[i]:
                 dyn_libs[packages[i]] = _dyn_libs[i]
-        if ctx.dependency_satisfied('static-build') and not dyn_libs:
-            pkgc_args += ["--static"]
+        pkgc_args += ["--static"]
 
         defaults = {
             'path':    ctx.env.PKG_CONFIG,

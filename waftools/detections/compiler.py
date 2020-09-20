@@ -26,7 +26,7 @@ def __add_generic_flags__(ctx):
         ctx.env.CFLAGS += ["-std=c99"]
 
     if ctx.is_optimization():
-        ctx.env.CFLAGS += ['-O2']
+        ctx.env.CFLAGS += ['-O3']
 
     if ctx.is_debug_build():
         ctx.env.CFLAGS += ['-g']
